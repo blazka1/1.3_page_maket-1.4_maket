@@ -328,6 +328,7 @@ main {
     }
     .slide-menu {
         overflow-x: hidden;
+        overflow-y: hidden;
         flex-wrap: wrap;
     }
     .slide-menu__button_style {
