@@ -46,16 +46,23 @@ html {
 
 }
 body {
+    font-family: TTLakes;
     position:relative;
     overflow-x:hidden;
     margin: 0;
 }
 main {
     background-color: #F8F8F8;
+    padding: 24px 16px 16px 16px;
 }
 
 .header__nav {
     border-bottom: 1px solid #D9FFF5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 24px 16px;
+    align-items: center;
 
 }
 
@@ -85,7 +92,7 @@ main {
 .divider {
     width: 2px;
     height: 32px;
-    background: no-repeat center center url("assets/other/divider.svg");
+    background-color: #EAEAEA;
 }
 .divider.divider_320_768 {
     display: none;
@@ -131,6 +138,8 @@ main {
     font-family: TTLakes;
     font-weight: 700;
     font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
 }
 .title__text:before {
     content: "";
@@ -146,7 +155,10 @@ main {
     position: relative;
     overflow: scroll;
 }
-
+.slide-menu::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 .slide-menu__button {
     white-space: nowrap;
     border-radius: 6px;
@@ -155,6 +167,8 @@ main {
     color: #7E7E82;
     background-color: transparent;
     font-family: TTLakes;
+    line-height: 24px;
+    letter-spacing: -0.2px;
     font-weight: 300;
 }
 .slide-menu__button_active {
@@ -166,13 +180,17 @@ main {
     font-family: TTLakes;
     font-weight: 300;
     font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
     padding: 0;
     margin: 0;
 }
 
 .photo-logo {
-    width: 100%;
+    width: calc(100% + 30px);
     height: auto;
+    margin: 0 -15px;
+
 }
 
 .read-next {
@@ -185,6 +203,8 @@ main {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-bottom: 20px;
 }
 
 .read-next:before {
@@ -216,14 +236,10 @@ main {
 }
 
 .main_style {
-    padding: 24px 16px 16px 16px;
+
 }
 .header__nav_style {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 24px 16px;
-    align-items: center;
+
 }
 .header__burger-menu_style {
     display: flex;
@@ -255,8 +271,21 @@ main {
     padding-left: 24px;
 }
 
+
 /*768-1120px*/
 @media screen and (min-width: 768px){
+    .container {
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .read-next {
+        margin-bottom: 0;
+    }
+    .photo-logo {
+        margin: 0;
+        width: 100%;
+    }
     .hidd_320_768 {
         display: block;
     }
