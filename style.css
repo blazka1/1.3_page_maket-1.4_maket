@@ -263,7 +263,7 @@ main {
     display: flex;
     flex-direction: row;
 }
-.info__p_style {
+.info__about-us_style {
     margin-bottom: 16px;
 }
 
@@ -307,10 +307,10 @@ main {
         flex-direction: row;
         justify-content: space-between;
     }
-    .info__col_1_style {
+    .info__container-about-us_style {
         flex-basis: 48%;
     }
-    .info__col_2_style {
+    .info__container-image_style {
         flex-basis: 48%;
     }
     .photo-logo_style {
@@ -337,21 +337,21 @@ main {
         flex-direction: row;
         justify-content: space-between;
     }
-    .title__col_2_style {
+    .title__container_style {
         display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: space-around;
         flex-basis: 35%;
     }
-    .title__label_style {
+    .title__wrap-butt_style {
         display: flex;
         flex-direction: row;
         align-items: center;
         font-family: TTLakes;
 
     }
-    .title__span_style {
+    .title__icon-text_style {
         white-space: nowrap;
         margin-right: 7px;
     }
