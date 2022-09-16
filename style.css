@@ -154,11 +154,14 @@ main {
 .slide-menu {
     position: relative;
     overflow: scroll;
+    scrollbar-width: none;
 }
 .slide-menu::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
+
+
 .slide-menu__button {
     white-space: nowrap;
     border-radius: 6px;
