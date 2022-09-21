@@ -1,0 +1,122 @@
+ul, li {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body {
+    width: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.burger-panel {
+    padding: 18px 24px 32px;
+}
+.burger-panel__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.icon-burger-close {
+    border: none;
+    width: 40px;
+    height: 40px;
+    background: no-repeat center center url("assets/icons/burger-close.svg");
+}
+.icon-search {
+    border: none;
+    width: 40px;
+    height: 40px;
+    background: no-repeat center center url("assets/icons/search.svg");
+}
+
+.logo {
+    margin-left: -40px;
+}
+.burger-panel__links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 236px;
+
+}
+.burger-panel__link {
+    position: relative;
+    display: inherit;
+    font-family: TTLakes;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-bottom: 32px;
+}
+.burger-panel__link:hover {
+    transition: 0.7s ease;
+    letter-spacing: 1px;
+    color: #FF3E79;
+
+}
+.burger-panel__link_active {
+    color: #7E7E82;
+}
+.burger-panel__link_active::after {
+    content: "";
+    top: -3px;
+    left: -24px;
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    background-color: #41F6D7;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.burger-panel__contacts {
+    margin-bottom: 16px;
+}
+
+.burger-panel__mail {
+    display: inherit;
+    font-family: TTLakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.burger-panel__phone {
+    display: inherit;
+    font-family: TTLakes;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.burger-panel__switch-lang {
+    display: flex;
+}
+.burger-panel__lang-btn {
+    border: none;
+    font-family: TTLakes;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+.burger-panel__lang-btn:hover {
+    color: darkred;
+    transition: 1s ease;
+    filter: drop-shadow(0px 0px 8px darkred);
+}
+
+.burger-panel__lang-btn_active {
+    color: #7E7E82;
+}
+
+.filter:hover {
+    transition: 1s ease;
+    filter: drop-shadow(0px 0px 8px darkred) hue-rotate(180deg);
+
+}
