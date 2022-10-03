@@ -1,69 +1,47 @@
-let state = 0;
-let allElementSlider = document.querySelectorAll(".swiper-slide");
-let visibleMore = document.querySelector('.btn-more');
+
+const allElementSlider = document.querySelectorAll(".swiper-slide");
+const visibleMore = document.querySelector('.btn-more__button');
+const btnArrow = document.querySelector('.btn-more__img');
 
 
-if (window.innerWidth < 768)
-    {
-        const swiper = new Swiper('.swiper', {
-            direction: 'horizontal',
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            slidesPerView: 'auto',
-        });
 
-
+visibleMore.addEventListener('click',  () => {
+    for (let i = 0; i < allElementSlider.length; i++) {
+        allElementSlider[i].classList.toggle('visible');
     }
+    if (visibleMore.classList.contains('close')) {
+        visibleMore.classList.remove('close');
+        visibleMore.classList.add('open');
+        visibleMore.textContent = 'Скрыть';
+        btnArrow.style.transform = 'rotate(180deg)';
+    } else if (visibleMore.classList.contains('open')) {
+        visibleMore.classList.remove('open');
+        visibleMore.classList.add('close');
+        visibleMore.textContent = 'Показать все';
+        btnArrow.style.transform = 'rotate(360deg)';
+    }
+
+})
+if (window.innerWidth < 768) {
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        slidesPerView: 'auto',
+    });
+}
 
 if (window.innerWidth >= 768) {
-    for (let i = 0; i < 6; i++)
-    {
+    for (let i = 0; i < 6; i++) {
         allElementSlider[i].style.display = "flex";
-
-    }
-
-    visibleMore.onclick = function () {
-        for (let i = 0; i < allElementSlider.length; i++)
-        {
-            allElementSlider[i].classList.toggle('visible');
-        }
-        if (state == 0) {
-            visibleMore.innerHTML = 'Скрыть';
-            state = 1;
-            visibleMore.style.setProperty('--sq-img', "url(\"assets/icons/btn-more-reverse.svg\")");
-        }
-        else if (state == 1) {
-            visibleMore.innerHTML = 'Показать все';
-            state = 0;
-            visibleMore.style.setProperty('--sq-img', "url(\"assets/icons/btn-more.svg\")");
-        }
-
     }
 }
 
 if (window.innerWidth >= 1120) {
-    for (let i = 0; i < 8; i++)
-    {
+    for (let i = 0; i < 8; i++) {
         allElementSlider[i].style.display = "flex";
-
-    }
-
-    visibleMore.onclick = function () {
-        for (let i = 0; i < allElementSlider.length; i++)
-        {
-            allElementSlider[i].classList.toggle('visible');
-        }
-        if (state == 0) {
-            visibleMore.innerHTML = 'Скрыть';
-            state = 1;
-            visibleMore.style.setProperty('--sq-img', "url(\"assets/icons/btn-more-reverse.svg\")");
-        }
-        else if (state == 1) {
-            visibleMore.innerHTML = 'Показать все';
-            state = 0;
-            visibleMore.style.setProperty('--sq-img', "url(\"assets/icons/btn-more.svg\")");
-        }
 
     }
 }
