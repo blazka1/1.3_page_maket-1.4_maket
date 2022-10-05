@@ -1,7 +1,6 @@
 
 const allElementSlider = document.querySelectorAll(".swiper-slide");
-const visibleMore = document.querySelector('.btn-more__button');
-const btnArrow = document.querySelector('.btn-more__img');
+const visibleMore = document.querySelector('.btn-more');
 
 
 
@@ -13,12 +12,12 @@ visibleMore.addEventListener('click',  () => {
         visibleMore.classList.remove('close');
         visibleMore.classList.add('open');
         visibleMore.textContent = 'Скрыть';
-        btnArrow.style.transform = 'rotate(180deg)';
+
     } else if (visibleMore.classList.contains('open')) {
         visibleMore.classList.remove('open');
         visibleMore.classList.add('close');
         visibleMore.textContent = 'Показать все';
-        btnArrow.style.transform = 'rotate(360deg)';
+
     }
 
 })
